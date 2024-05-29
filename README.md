@@ -8,11 +8,11 @@ DOSEN   : Agung Nugroho, S.Kom., M.Kom.
 ```
 ### Soal Latihan
 ![gambar](praktikum5/ss19.png)
-![Image](ss2/ss20.png)
-![Image](ss2/ss21.png)
-![Image](ss2/ss22.png)
+![Image](praktikum5/ss20.png)
+![Image](praktikum5/ss21.png)
+![Image](praktikum5/ss22.png)
 ### Tugas Latihan
-![Image](ss2/ss23.png)
+![Image](praktikum5/ss23.png)
 
 - Buat Table Mahasiswa
 ```
@@ -28,7 +28,7 @@ no_hp VARCHAR(20) DEFAULT NULL,
 kd_ds VARCHAR(20) DEFAULT NULL,
 PRIMARY KEY (nim));
 ```
-![Image](ss/ss1.png)
+![Image](praktikum5/ss1.png)
 ```
 INSERT INTO Mahasiswa(nim, nama, jk, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds) values
 ('1812345', 'Ari Santoso', 'L', '1999-10-11', NULL, 'Bekasi', NULL, NULL, 'DS002'),
@@ -44,8 +44,8 @@ INSERT INTO Mahasiswa(nim, nama, jk, tgl_lahir, jalan, kota, kodepos, no_hp, kd_
 ('1956789', 'Dadi Martani', 'L', '2001-08-29', NULL, 'Bekasi', NULL, NULL, 'DS005'),
 ('1967890', 'Bayu Laksono', 'L', '1999-07-22', NULL, 'Cikarang', NULL, NULL, 'DS004');
 ```
-![Image](ss/ss2.png)
-![Image](ss/ss3.png)
+![Image](praktikum5/ss2.png)
+![Image](praktikum5/ss3.png)
 
 
 - Table Dosen
@@ -63,8 +63,8 @@ INSERT INTO dosen (kd_ds, nama) values
 ('DS004', 'Ratna Kumala'),
 ('DS005', 'Vika Prasetyo');
 ```
-![Image](ss/ss4.png)
-![image](ss/ss5.png)
+![Image](praktikum5/ss4.png)
+![image](praktikum5/ss5.png)
 
 
 - Table Matakuliah
@@ -86,8 +86,8 @@ INSERT INTO Matakuliah (kd_mk, nama, sks) values
 ('MK008', 'Arsitektur Komputer', '2');
 ```
 
-![image](ss/ss6.png)
-![image](ss/ss7.png)
+![image](praktikum5/ss6.png)
+![image](praktikum5/ss7.png)
 
 
 - Table Jadwal Mengajar
@@ -112,9 +112,9 @@ INSERT INTO JadwalMengajar(kd_mk, kd_ds, hari, jam, ruang) values
 ('MK007', 'DS005', 'Rabu', '08:00:00', '102'),
 ('MK008', 'DS005', 'Kamis', '13:00:00', '201');
 ```
-![image](ss/ss8.png)
-![image](ss/ss9.png)
-![image](ss/ss10.png)
+![image](praktikum5/ss8.png)
+![image](praktikum5/ss9.png)
+![image](praktikum5/ss10.png)
 
 
 - Table KrsMahasiswa
@@ -135,8 +135,8 @@ INSERT INTO KRSMahasiswa(nim, kd_mk, kd_ds, semester) values
 ('1823456', 'MK007', 'DS005', '3'),
 ('1823456', 'MK008', 'DS005', '3');
 ```
-![image](ss/ss11.png)
-![image](ss/ss12.png)
+![image](praktikum5/ss11.png)
+![image](praktikum5/ss12.png)
 
 ### Tugas latihan
 1. Lakukan join table Mahasiswa dan Dosen
@@ -146,14 +146,14 @@ SELECT Mahasiswa.nim, Mahasiswa.nama, Mahasiswa.jk, Dosen.nama AS "Dosen PA"
 FROM Mahasiswa INNER JOIN Dosen ON Dosen.kd_ds = Mahasiswa.kd_ds;
 ```
 - output :
-![image](ss/ss13.png)
+![image](praktikum5/ss13.png)
 - input dengan left join
 ```
 SELECT Mahasiswa.nim, Mahasiswa.nama, Mahasiswa.jk, Dosen.nama AS "Dosen PA"
 FROM Mahasiswa LEFT JOIN Dosen ON Dosen.kd_ds = Mahasiswa.kd_ds;
 ```
 - output :
-![image](ss/ss14.png)
+![image](praktikum5/ss14.png)
 
 2. Lakukan join table Mata kuliah dan Dosen
 - input
@@ -164,7 +164,7 @@ LEFT JOIN Matakuliah ON JadwalMengajar.kd_mk = Matakuliah.kd_mk
 LEFT JOIN Dosen ON JadwalMengajar.kd_ds = Dosen.kd_ds;
 ```
 - output :
-![image](ss/ss15.png)
+![image](praktikum5/ss15.png)
 
 3. Lakukan join table Jadwal Mengajar, Dosen dan Matakuliah
 - input
@@ -175,7 +175,7 @@ LEFT JOIN Matakuliah ON JadwalMengajar.kd_mk = Matakuliah.kd_mk
 LEFT JOIN Dosen ON JadwalMengajar.kd_ds = Dosen.kd_ds;
 ```
 - output :
-![image](ss/ss16.png)
+![image](praktikum5/ss16.png)
 
 4. Lakukan join table KRSMahasiswa, Mahasiswa, Matakuliah Dan Dosen
 - input
@@ -187,4 +187,4 @@ JOIN Matakuliah ON KRSMahasiswa.kd_mk = Matakuliah.kd_mk
 JOIN Dosen ON KRSMahasiswa.kd_ds = Dosen.kd_ds;
 ```
 - output :
-![image](ss/ss18.png)
+![image](praktikum5/ss18.png)
