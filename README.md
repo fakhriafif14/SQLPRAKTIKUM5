@@ -7,7 +7,7 @@ MATKUL  : BASIS DATA
 DOSEN   : Agung Nugroho, S.Kom., M.Kom.
 ```
 ### Soal Latihan
-![Image](ss2/ss19.png)
+![gambar](praktikum5/ss19.png)
 ![Image](ss2/ss20.png)
 ![Image](ss2/ss21.png)
 ![Image](ss2/ss22.png)
